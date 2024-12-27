@@ -1,0 +1,43 @@
+package dec_24_day_03;
+
+/*Swap Elements in Pairs
+ Write a program to swap elements of the array {1, 2, 3, 4, 5} in pairs. 
+ If the array has an odd length, leave the last element as is.
+ Example: Resulting array should be {2, 1, 4, 3, 5}.*/
+
+public class SwapInPair {
+
+	public static void printAarry(int[] arr)
+	{
+		for(int x : arr)
+		{
+			System.out.print(x+" ");
+		}
+	}
+	
+	public static void swapInPair(int[] a)
+	{
+		for(int i=0;i<a.length-1;i+=2)           
+		{
+			int temp = a[i];       
+			a[i]=a[i+1];
+			a[i+1]=temp;
+			
+
+		}
+	}
+	
+	public static void main(String[] args) 
+	{
+		int[] arr={1,2,3,4,5};
+		System.out.print("Before swapping the element : ");
+		printAarry(arr);
+		swapInPair(arr);
+		System.out.print("\nAfter swapping the element : ");
+		printAarry(arr);
+		
+		
+
+	}
+
+}
