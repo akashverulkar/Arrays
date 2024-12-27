@@ -1,0 +1,44 @@
+package dec_24_day_03;
+
+/*Implement a Java program to find the index number of an element 
+in an int array from a given range by using binary searching and 
+display the results.*/
+
+import java.util.Scanner;
+
+public class BinarySearch {
+
+	
+	public static void binary(int[] nums) 
+	{
+		 Scanner sc = new Scanner(System.in);
+			
+			System.out.print("Enter the element : ");
+			int ele = sc.nextInt();
+			int c=0;
+			for(int i = 0;i<nums.length;i++)
+			{
+				if(nums[i]==ele)
+				{
+					System.out.println(ele+" present in index : "+i);
+					c++;
+				}
+				
+			}
+			if(c==0)
+			
+			System.err.println("element is not available in that array");
+			
+      }
+	
+	
+	public static void main(String[] args)
+	{
+		int[] nums = {3,4,5,6,7,8,7,13,7};
+		
+		binary(nums);
+		
+	}
+
+
+}
