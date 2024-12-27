@@ -1,0 +1,55 @@
+package dec_24_day_03;
+
+/*Swap Maximum and Minimum Elements
+ Write a program to swap the maximum and minimum elements in an array 
+ {3, 1, 4, 5, 2}.
+ Example: Resulting array should be {3, 5, 4, 1, 2}.*/
+
+public class SwapMinMax {
+
+	public static void printArray(int[] arr)
+	{
+		for(int x : arr)
+		{
+			System.out.print(x+" ");
+		}
+	}
+	
+	public static void swapMinMax(int[] a)
+	{
+		int maxindex=0;
+		int minindex=0;
+		for(int i=1;i<a.length;i++)
+		{
+			
+				if(a[i]>a[maxindex])  // 5>4  2>5
+				{
+					maxindex=i; // 3  
+				}
+				 
+				if(a[i]<a[minindex])  // 2<1
+				{
+					minindex=i; // 1  
+				}
+				
+			}
+		int temp=a[maxindex];
+		a[maxindex]=a[minindex];
+		a[minindex]=temp;
+			
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		int[] a = {3,1,4,5,2};
+		System.out.print("before swaping the max and min number : ");
+		printArray(a);
+		swapMinMax(a);
+		System.out.print("\nAfter Swapping the max And min number : ");
+		printArray(a);
+	
+
+	}
+
+}
