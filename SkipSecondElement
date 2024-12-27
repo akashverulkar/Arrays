@@ -1,0 +1,36 @@
+package dec_24_day_03;
+
+/*Copy Elements Skipping Every Second Element
+ Write a program to copy the elements of an array {1, 2, 3, 4, 5, 6}
+ into a new array, skipping every second element. 
+ The resulting array should be {1, 3, 5}.*/
+
+public class SkipSecondElement {
+
+	public static void secondElement(int[] a)
+	{
+		
+		int[] b= new int[a.length];
+		
+		System.out.print("Skip the secondn element : ");
+		for(int i=0;i<a.length;i++)
+		{
+			if(i%2==0)
+			{
+				b[i]=a[i];
+				System.out.print(b[i]+" ");
+			}
+			
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+		int[] a= {1,2,3,4,6,8,7,5};
+		secondElement(a);
+		
+		
+
+	}
+
+}
