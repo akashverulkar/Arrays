@@ -1,0 +1,43 @@
+package dec_24_day_03;
+
+/*Write a program to replace all negative numbers in the array 
+ {1, -2, 3, -4, 5} with 0.
+ Example: Resulting array should be {1, 0, 3, 0, 5}.
+*/
+
+
+
+public class ReplaceNegetiveWithZero {
+
+	 public static void printArray(int[] a)
+	 {
+		 System.out.print("Given array are :");
+	 	for(int i : a)
+	 	{
+	 		System.out.print(i+" ");
+	 	}
+	 }
+	
+	public static void replaceNagative(int[] a)
+	{
+		System.out.print("\nAfter replacing negavtive number : ");
+		for(int i=0;i<a.length;i++)
+		{
+			if(a[i]<0)
+			{
+				a[i]=0;
+			}
+			System.out.print(a[i]+" ");
+		}
+	}
+	
+	
+	public static void main(String[] args) 
+	{
+		int[] a = {1, -2, 3, -4, 5};
+		printArray(a);
+		replaceNagative(a);
+
+	}
+
+}
